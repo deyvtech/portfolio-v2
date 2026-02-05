@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+  --font-inter: "Inter", sans-serif;
+
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+.custom-border {
+  @apply border-neutral-200/50 dark:border-neutral-800/50;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-red-600 via-violet-600 to-rose-400 bg-clip-text text-transparent;
+}
