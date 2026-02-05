@@ -15,7 +15,7 @@ export const Header = () => {
 						</Link>
 
 						<span className="font-light opacity-30 text-[10px]">
-							v1.0.0
+							v2.0.0
 						</span>
 					</h3>
 				</div>
