@@ -13,5 +13,5 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r from-red-600 via-violet-600 to-rose-400 bg-clip-text text-transparent;
+  @apply bg-linear-to-r from-red-600 via-violet-600 to-rose-400 bg-clip-text text-transparent;
 }
