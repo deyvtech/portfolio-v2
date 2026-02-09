@@ -1,6 +1,6 @@
 import React from "react";
 
-const SkillsBadge = ({id, parentClass, childClass, name}) => {
+const SkillsBadge = ({ id, parentClass, childClass, name }) => {
 	return (
 		<div
 			key={id}
