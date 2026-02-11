@@ -3,8 +3,9 @@ import { Link } from "react-router";
 import GradientText from "./animation/GradientText";
 
 import { navLinks } from "../constants";
-
+import { useTheme } from "../context/ThemeContext";
 export const Header = () => {
+	const {theme, setTheme} = useTheme();
 	return (
 		<header className="fixed top-0 w-full z-50 border-b custom-border backdrop-blur-md">
 			<nav className="max-w-7xl mx-auto h-16 flex items-center justify-between">
@@ -26,8 +27,8 @@ export const Header = () => {
 						</li>
 					))}
 					<li>
-						<button className="uppercase border px-2 py-1 custom-border cursor-pointer hover:bg-blue-900/30">
-							Light
+						<button className="uppercase border px-2 py-1 custom-border cursor-pointer hover:bg-blue-900/30" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+							{theme === 'light' ? 'Light' : 'Dark'}
 						</button>
 					</li>
 				</ul>

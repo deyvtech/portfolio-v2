@@ -15,19 +15,18 @@ const Skills = () => {
 					revealDirection="center"
 				/>
 			</h3>
-			<div className="inline-flex flex-wrap gap-x-4 gap-y-2 max-w-125">
+			<div className="inline-flex flex-wrap gap-x-4 gap-y-3 max-w-200">
 				{
 					/* Using constants to map through core technologies */
 					coreTechnologies.map((tech) => {
 						return (
-							<>
-								<SkillsBadge
-									parentClass={tech.parentClass}
-									childClass={tech.childClass}
-									id={tech.id}
-									name={tech.name}
-								/>
-							</>
+							<SkillsBadge
+								key={tech.id}
+								parentClass={tech.parentClass}
+								childClass={tech.childClass}
+								id={tech.id}
+								name={tech.name}
+							/>
 						);
 					})
 				}

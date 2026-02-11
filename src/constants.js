@@ -55,6 +55,12 @@ export const coreTechnologies = [
 		childClass: "bg-blue-800/5 border-blue-800/20 group-hover:bg-blue-800",
 		parentClass: "border-blue-800/20 bg-blue-800/5 hover:border-blue-800",
 	},
+	{
+		id: 9,
+		name: "Shopify",
+		childClass: "bg-green-800/5 border-green-800/20 group-hover:bg-green-800",
+		parentClass: "border-green-800/20 bg-green-800/5 hover:border-green-800",
+	}
 ];
 
 export const navLinks = [
