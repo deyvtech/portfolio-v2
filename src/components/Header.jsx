@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router";
 import GradientText from "./animation/GradientText";
 
-import { navLinks } from "../constants";
+import { navLinks } from "../data";
 import { useTheme } from "../context/ThemeContext";
 export const Header = () => {
 	const {theme, setTheme} = useTheme();
 	return (
-		<header className="fixed top-0 w-full z-50 border-b custom-border backdrop-blur-md">
+		<header className="fixed top-0 w-full z-50 border-b custom-border backdrop-blur-md bg-transparent">
 			<nav className="max-w-7xl mx-auto h-16 flex items-center justify-between">
 				<div>
 					<h3 className="uppercase font-bold tracking-tighter text-sm flex items-center gap-2">
@@ -15,7 +15,7 @@ export const Header = () => {
 							<GradientText>Deyv_Architecture</GradientText>{" "}
 						</Link>
 
-						<span className="font-light opacity-30 text-[10px]">
+						<span className="font-light opacity-100 dark:opacity-30 text-[10px]">
 							v2.0.0
 						</span>
 					</h3>

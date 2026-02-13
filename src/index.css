@@ -1,21 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-jetbrains-mono: "JetBrains Mono", monospace;
-  --font-inter: "Inter", sans-serif;
+	--font-jetbrains-mono: "JetBrains Mono", monospace;
+	--font-inter: "Inter", sans-serif;
 }
-
 
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-
 .custom-border {
-  @apply border-neutral-200/50 dark:border-neutral-800/50;
+	@apply border-neutral-200/50 dark:border-neutral-800/40;
 }
 
 .text-gradient {
-  @apply bg-linear-to-r from-red-600 via-violet-600 to-rose-400 bg-clip-text text-transparent;
+	@apply bg-linear-to-r from-red-600 via-violet-600 to-rose-400 bg-clip-text text-transparent;
 }
+.bg-dots {
+  @apply bg-[radial-gradient(#00000030_1px,transparent_1px)] bg-size-[20px_20px]
+}
+.dark--bg-dots {
+  @apply dark:bg-[radial-gradient(#0b0f21_1px,transparent_1px)] bg-size-[20px_20px]
+}
+
 

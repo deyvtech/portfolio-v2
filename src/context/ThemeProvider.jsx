@@ -1,29 +1,28 @@
 'use client';
 import React from "react";
 import { ThemeProviderContext } from "./ThemeContext.js";
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-export const ThemeProvider = ({ children, storageKey = "bytehive-theme" }) => {
-    const [theme, setTheme] = React.useState("dark"); 
 
-    React.useEffect(() => {
-        const storedTheme = localStorage.getItem(storageKey);
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        
-        const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
-        setTheme(initialTheme);
-    }, [storageKey]);
-
+export const ThemeProvider = ({ children, storageKey = "deyv-theme" }) => {
+    const [theme, setTheme] = React.useState(() => {
+        return localStorage.getItem('deyv-theme') || (prefersDark ? "dark" : "light")
+    }); 
     React.useEffect(() => {
         const html = document.documentElement;
-        html.classList.remove("light", "dark");
-        html.classList.add(theme);
         html.setAttribute("data-theme", theme);
+        setTheme(theme);
+    }, [theme]);
+
+    
+    const setHandleTheme = (theme) => {
         localStorage.setItem(storageKey, theme);
-    }, [theme, storageKey]);
+        setTheme(theme)
+    }
 
     const value = {
         theme,
-        setTheme,
+        setTheme: setHandleTheme,
     };
 
     return (
