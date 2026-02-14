@@ -7,7 +7,7 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 const Home = () => {
 	return (
-		<>
+		<div className="pt-40">
 			{/* Section: Hero */}
 			<Hero />
 			{/* Section: Skills */}
@@ -20,7 +20,7 @@ const Home = () => {
 			<Contact />
 			{/* Section: Footer */}
 			<Footer />
-		</>
+		</div>
 	);
 };
 
