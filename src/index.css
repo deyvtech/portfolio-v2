@@ -5,7 +5,9 @@
 	--font-jetbrains-mono: "JetBrains Mono", monospace;
 	--font-inter: "Inter", sans-serif;
 }
-
+body {
+	font-family: var(--font-inter);
+}
 /* @custom-variant dark (&:where(.dark, .dark *)); */
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
@@ -23,4 +25,6 @@
   @apply dark:bg-[radial-gradient(#0b0f21_1px,transparent_1px)] bg-size-[20px_20px]
 }
 
-
+.input-field {
+	@apply w-full mt-2 px-4 py-2 border border-slate-100/10 shadow-md backdrop-blur-md  transition-colors duration-200 placeholder:opacity-70 placeholder:text-white placeholder:font-normal placeholder:text-[12px] focus-within:outline-0;
+}

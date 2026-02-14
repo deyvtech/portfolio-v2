@@ -11,9 +11,9 @@ export const Header = () => {
 			<nav className="max-w-7xl mx-auto h-16 flex items-center justify-between">
 				<div>
 					<h3 className="uppercase font-bold tracking-tighter text-sm flex items-center gap-2">
-						<Link to="/">
+						<a href="#hero">
 							<GradientText>Deyv_Architecture</GradientText>{" "}
-						</Link>
+						</a>
 
 						<span className="font-light opacity-100 dark:opacity-30 text-[10px]">
 							v2.0.0
@@ -23,7 +23,11 @@ export const Header = () => {
 				<ul className="flex items-center gap-8 text-[10px] uppercase tracking-widest">
 					{navLinks.map((link) => (
 						<li key={link.name} className="hover:text-red-500">
-							<Link to={link.path}>{link.name}</Link>
+							{link.path.startsWith("#") ? (
+								<a href={`/${link.path}`}>{link.name}</a>
+							) : (
+								<Link to={`${link.path}`}>{link.name}</Link>
+							)}
 						</li>
 					))}
 					<li>

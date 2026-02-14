@@ -3,9 +3,16 @@ import SkillsBadge from "./SkillsBadge";
 import { coreTechnologies } from "../data";
 import { Link2, Github } from "lucide-react";
 
-const ProjectCard = ({title, subtitle, description, projectLink, repoLink, useTechnologies}) => {
+const ProjectCard = ({
+	title,
+	subtitle,
+	description,
+	projectLink,
+	repoLink,
+	useTechnologies,
+}) => {
 	return (
-		<li className="p-10 border border-slate-100/10">
+		<li className="p-10 border border-slate-100/10 shadow-md backdrop-blur-md">
 			<p className="font-jetbrains-mono font-bold uppercase text-[12px] text-sky-600">
 				{subtitle}
 			</p>
@@ -34,27 +41,31 @@ const ProjectCard = ({title, subtitle, description, projectLink, repoLink, useTe
 			<ul className="mt-6 flex flex-wrap gap-3">
 				{/* Repo Link */}
 				<li>
-					<a
-						href={repoLink}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex items-center gap-2 px-2 py-1   text-zinc-300 font-mono text-sm hover:bg-zinc-400  hover:text-white transition-all duration-200"
+					{repoLink !== "#" ? (
+						<a
+							href={repoLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center gap-2 px-2 py-1  text-black  dark:text-zinc-300 font-mono text-sm hover:bg-zinc-400  hover:text-white transition-all duration-200"
 					>
 						<span>Source_Code()</span>
 						<Github className="w-4 h-4" />
 					</a>
+					) : null}
 				</li>
 				{/* Explore Link */}
 				<li>
-					<a
-						href={projectLink}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="flex items-center gap-2 px-2 py-1   text-blue-400 font-mono text-sm hover:bg-blue-500 hover:text-white transition-colors duration-200"
-					>
-						<span>View_Live()</span>
-						<Link2 className="w-4 h-4" />
-					</a>
+					{projectLink !== "#" ? (
+						<a
+							href={projectLink}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="flex items-center gap-2 px-2 py-1   text-blue-400 font-mono text-sm hover:bg-blue-500 hover:text-white transition-colors duration-200"
+						>
+							<span>View_Live()</span>
+							<Link2 className="w-4 h-4" />
+						</a>
+					) : null}
 				</li>
 			</ul>
 		</li>

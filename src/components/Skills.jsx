@@ -5,7 +5,7 @@ import SkillsBadge from "./SkillsBadge";
 
 const Skills = () => {
 	return (
-		<section className="mt-32 space-y-6">
+		<section className="mt-32 space-y-6 scroll-mt-20">
 			<h3 className="opacity-100 dark:opacity-30 uppercase tracking-[0.4em] text-[10px] mb-8">
 				<DecryptedText
 					text="Core_Technologies"

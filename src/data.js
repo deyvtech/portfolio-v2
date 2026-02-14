@@ -66,10 +66,10 @@ export const coreTechnologies = [
 ];
 
 export const navLinks = [
-	{ name: "Projects", path: "/a" },
-	{ name: "Experience", path: "/d" },
-	{ name: "✨ AI_Lab", path: "/f" },
-	{ name: "Connect", path: "/v" },
+	{ name: "Projects", path: "#projects" },
+	{ name: "Experience", path: "#experience" },
+	{ name: "✨ AI_Lab", path: "/ai_lab" },
+	{ name: "Connect", path: "#contact" },
 ];
 
 export const projects = [

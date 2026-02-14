@@ -2,7 +2,7 @@ import React from "react";
 import TextType from "./animation/TextType";
 const Hero = () => {
 	return (
-		<section>
+		<section id="hero" className="scroll-mt-20">
 			<div className="inline-flex items-center gap-2 px-3 py-1  border border-green-500/20 bg-green-500/5 text-green-500 text-[10px] mb-20">
 				<span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
 				SYSTEM_STATUS: OPEN_FOR_INQUIRY
