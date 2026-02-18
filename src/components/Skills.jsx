@@ -2,10 +2,11 @@ import React from "react";
 import { coreTechnologies } from "../data";
 import DecryptedText from "./animation/DecryptedText";
 import SkillsBadge from "./SkillsBadge";
+import {motion as Motion } from "motion/react";
 
 const Skills = () => {
 	return (
-		<section className="mt-32 space-y-6 scroll-mt-20">
+		<Motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="mt-24 space-y-6 scroll-mt-20">
 			<h3 className="opacity-100 dark:opacity-30 uppercase tracking-[0.4em] text-[10px] mb-8">
 				<DecryptedText
 					text="Core_Technologies"
@@ -33,7 +34,7 @@ const Skills = () => {
 					})
 				}
 			</div>
-		</section>
+		</Motion.section>
 	);
 };
 

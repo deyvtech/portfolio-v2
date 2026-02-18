@@ -2,6 +2,29 @@ import React from "react";
 import SkillsBadge from "./SkillsBadge";
 import { coreTechnologies } from "../data";
 import { Link2, Github } from "lucide-react";
+import { motion as Motion } from "motion/react";
+
+const item = {
+	hide: { opacity: 0, y: 20, filter: "blur(10px)" },
+	show: {
+		opacity: 1,
+		y: 0,
+		filter: "blur(0px)",
+		transition: {
+			duration: 0.6,
+			when: "beforeChildren",
+			staggerChildren: 0.2,
+		},
+	},
+};
+const textVariant = {
+	hide: { opacity: 0, y: 10 },
+	show: {
+		opacity: 1,
+		y: 0,
+	},
+	transition: { duration: 0.6 },
+};
 
 const ProjectCard = ({
 	title,
@@ -12,15 +35,20 @@ const ProjectCard = ({
 	useTechnologies,
 }) => {
 	return (
-		<li className="p-10 border border-slate-100/10 shadow-md backdrop-blur-md">
-			<p className="font-jetbrains-mono font-bold uppercase text-[12px] text-sky-600">
+		<Motion.li
+			variants={item}
+			className="p-10 border border-slate-100/10 shadow-md backdrop-blur-md"
+		>
+			<Motion.p variants={textVariant} className="font-jetbrains-mono font-bold uppercase text-[12px] text-sky-600">
 				{subtitle}
-			</p>
-			<h4 className="text-2xl mt-4">{title}()</h4>
-			<p className=" text-neutral-500 mt-4 font-inter text-sm leading-relaxed mb-6">
+			</Motion.p>
+			<Motion.h4 variants={textVariant} className="text-2xl mt-4">
+				{title}()
+			</Motion.h4>
+			<Motion.p variants={textVariant} className=" text-neutral-500 mt-4 font-inter text-sm leading-relaxed mb-6">
 				{description}
-			</p>
-			<div className="inline-flex flex-wrap gap-x-4 gap-y-3 max-w-200">
+			</Motion.p>
+			<Motion.div variants={textVariant} className="inline-flex flex-wrap gap-x-4 gap-y-3 max-w-200">
 				{
 					/* Using constants to map through core technologies */
 					coreTechnologies
@@ -37,8 +65,8 @@ const ProjectCard = ({
 							);
 						})
 				}
-			</div>
-			<ul className="mt-6 flex flex-wrap gap-3">
+			</Motion.div>
+			<Motion.ul variants={textVariant} className="mt-6 flex flex-wrap gap-3">
 				{/* Repo Link */}
 				<li>
 					{repoLink !== "#" ? (
@@ -47,10 +75,10 @@ const ProjectCard = ({
 							target="_blank"
 							rel="noopener noreferrer"
 							className="flex items-center gap-2 px-2 py-1  text-black  dark:text-zinc-300 font-mono text-sm hover:bg-zinc-400  hover:text-white transition-all duration-200"
-					>
-						<span>Source_Code()</span>
-						<Github className="w-4 h-4" />
-					</a>
+						>
+							<span>Source_Code()</span>
+							<Github className="w-4 h-4" />
+						</a>
 					) : null}
 				</li>
 				{/* Explore Link */}
@@ -67,8 +95,8 @@ const ProjectCard = ({
 						</a>
 					) : null}
 				</li>
-			</ul>
-		</li>
+			</Motion.ul>
+		</Motion.li>
 	);
 };
 

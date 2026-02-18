@@ -8,7 +8,7 @@ export const Header = () => {
 	const {theme, setTheme} = useTheme();
 	return (
 		<header className="fixed top-0 w-full z-50 border-b custom-border backdrop-blur-md bg-transparent">
-			<nav className="max-w-7xl mx-auto h-16 flex items-center justify-between">
+			<nav className="max-w-5xl mx-auto h-16 flex items-center justify-between">
 				<div>
 					<h3 className="uppercase font-bold tracking-tighter text-sm flex items-center gap-2">
 						<a href="#hero">

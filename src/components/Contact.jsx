@@ -1,6 +1,12 @@
 import React from 'react'
+import { useForm } from 'react-hook-form';
 
 const Contact = () => {
+
+    const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
+  console.log(errors);
+
   return (
     <section id="contact" className="mb-40 pb-20 scroll-mt-20" >
             <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
@@ -26,20 +32,20 @@ const Contact = () => {
                 </div>
                 
                 <div className="md:col-span-7">
-                    <form id="contactForm" className="space-y-6">
+                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
-                                <label htmlFor="identityToken" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Identity_Token</label>
-                                <input type="text" id="identityToken" placeholder="Full Name" className="input-field" required=""/>
+                                <label htmlFor="full_name" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Identity_Token</label>
+                                  <input type="text" className="input-field" placeholder="Full Name" value="Dave Lexter Supsup" {...register("full_name", {required: true})} />
                             </div>
                             <div className="space-y-2">
-                                <label htmlFor="returnChannel" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Return_Channel</label>
-                                <input type="email" id="returnChannel" placeholder="Email Address" className="input-field" required=""/>
+                                <label htmlFor="email_address" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Return_Channel</label>
+                                <input type="email" className="input-field" placeholder="Email Address" value="kingnorway17@gmail.com" {...register("email_address", {required: true})} />
                             </div>
                         </div>
                         <div className="space-y-2">
-                            <label htmlFor="messageBuffer" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Message_Buffer</label>
-                            <textarea id="messageBuffer" rows="6" placeholder="Project details and scope..." className="input-field resize-none" required=""></textarea>
+                            <label htmlFor="message" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Message_Buffer</label>
+                            <textarea rows="6" placeholder="Project details and scope..." className="input-field resize-none" value="This is a message" {...register("message", {required: true})} />
                         </div>
                         
                         <div className="flex justify-between items-center">
@@ -51,14 +57,15 @@ const Contact = () => {
                             </button>
                         </div>
                     </form>
+
                     
                     <div id="successMsg" className="hidden border border-green-500/30 bg-green-500/5 p-12 text-center rounded-sm">
                         <div className="w-12 h-12 border border-green-500/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"></path></svg>
+                            <svg className="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M5 13l4 4L19 7"></path></svg>
                         </div>
                         <p className="text-green-500 text-[10px] uppercase tracking-[0.3em] mb-4">Transmission_Verified</p>
                         <p className="text-xs font-sans text-neutral-500">Your signal has been received. I will respond via return address shortly.</p>
-                        <button onclick="resetForm()" className="mt-8 text-[9px] uppercase tracking-widest underline underline-offset-4 opacity-40 hover:opacity-100">Send_New_Signal</button>
+                        {/* <button onClick={resetForm} className="mt-8 text-[9px] uppercase tracking-widest underline underline-offset-4 opacity-40 hover:opacity-100">Send_New_Signal</button> */}
                     </div>
                 </div>
             </div>

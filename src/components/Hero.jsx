@@ -7,7 +7,7 @@ const Hero = () => {
 				<span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
 				SYSTEM_STATUS: OPEN_FOR_INQUIRY
 			</div>
-			<h1 className="text-6xl md:text-[80px] font-light tracking-tighter leading-tight mb-10">
+			<h1 className="text-6xl font-light tracking-tighter leading-tight mb-10">
 				Hello, <span className="text-gradient italic">I'm Dave</span>
 				.<br /> Full Stack{" "}
 				<span className="text-neutral-400">

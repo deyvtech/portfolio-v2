@@ -1,6 +1,20 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data";
+import {  motion as Motion } from "motion/react";
+
+const container = {
+	hide: { opacity: 0, y: 20 },
+	show: {
+		opacity: 1,
+		y: 0,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+};
+
+
 
 const Projects = () => {
 	return (
@@ -12,14 +26,17 @@ const Projects = () => {
 				</span>
 			</h3>
 
-			<ul className="mt-10 grid grid-cols-2 gap-10 mb-20">
-                {projects.map((project) => (
-                    <ProjectCard key={project.id} {...project} />
-                ))}
-				
-			
-			
-			</ul>
+			<Motion.ul
+				variants={container}
+				initial="hide"
+				whileInView="show"
+				viewport={{ once: true, amount: 0.1 }}
+				className="mt-10 grid grid-cols-2 gap-10 mb-20"
+			>
+				{projects.map((project) => (
+					<ProjectCard key={project.id} {...project}  />
+				))}
+			</Motion.ul>
 		</section>
 	);
 };

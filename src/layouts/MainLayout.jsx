@@ -5,7 +5,7 @@ const MainLayout = () => {
 		<>
 			<div className="dark:text-white font-jetbrains-mono">
 				<Header />
-				<div className="max-w-7xl mx-auto">
+				<div className="max-w-5xl mx-auto">
 					<Outlet />
 				</div>
 			</div>
