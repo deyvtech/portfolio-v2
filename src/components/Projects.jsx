@@ -31,7 +31,7 @@ const Projects = () => {
 				initial="hide"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.1 }}
-				className="mt-10 grid grid-cols-2 gap-10 mb-20"
+				className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-10 mb-20"
 			>
 				{projects.map((project) => (
 					<ProjectCard key={project.id} {...project}  />

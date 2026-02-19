@@ -41,12 +41,12 @@ const ProjectCard = ({
 	return (
 		<Motion.li
 			variants={item}
-			className="p-10 border border-slate-100/10 shadow-md backdrop-blur-md"
+			className="p-5 md:p-10 border border-slate-100/10 shadow-md backdrop-blur-md"
 		>
 			<Motion.p variants={textVariant} className="font-jetbrains-mono font-bold uppercase text-[12px] text-sky-600">
 				{subtitle}
 			</Motion.p>
-			<Motion.h4 variants={textVariant} className="text-2xl mt-4">
+			<Motion.h4 variants={textVariant} className="text-xl md:text-2xl mt-4">
 				{title}()
 			</Motion.h4>
 			<Motion.p variants={textVariant} className=" text-neutral-500 mt-4 font-inter text-sm leading-relaxed mb-6">

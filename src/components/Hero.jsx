@@ -41,7 +41,7 @@ const Hero = () => {
 				<span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
 				SYSTEM_STATUS: OPEN_FOR_INQUIRY
 			</Motion.div>
-			<Motion.h1 variants={textVariant} className="text-6xl font-light tracking-tighter leading-tight mb-10">
+			<Motion.h1 variants={textVariant} className="text-4xl md:text-6xl font-light tracking-tighter leading-tight mb-10">
 				Hello, <span className="text-gradient italic">I'm Dave</span>
 				.<br /> Full Stack{" "}
 				<span className="text-neutral-400">
@@ -67,7 +67,7 @@ const Hero = () => {
 			<Motion.div variants={textVariant} className="flex flex-wrap gap-4">
 				<a
 					href="#contact"
-					className="bg-red-600 text-white px-10 py-4 text-[11px] uppercase tracking-[0.2em] hover:bg-red-700 hover:-translate-y-2 hover:scale-95 transition-all shadow-lg shadow-red-500/20"
+					className="text-center w-full max-w-64 md:max-w-max bg-red-600 text-white px-10 py-4 text-[11px] uppercase tracking-[0.2em] hover:bg-red-700 hover:-translate-y-2 hover:scale-95 transition-all shadow-lg shadow-red-500/20"
 				>
 					Connect_System()
 				</a>
@@ -75,7 +75,7 @@ const Hero = () => {
 					href={pdf}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="border border-blue-200 dark:border-blue-800 px-10 py-4 text-[11px] uppercase tracking-[0.2em] hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all hover:-translate-y-2 hover:scale-95"
+					className="text-center w-full max-w-64 md:max-w-max border border-blue-200 dark:border-blue-800 px-10 py-4 text-[11px] uppercase tracking-[0.2em] hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all hover:-translate-y-2 hover:scale-95"
 				>
 					Get_Resume.PDF
 				</a>
