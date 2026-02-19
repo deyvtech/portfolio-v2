@@ -1,6 +1,5 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
-
 const Contact = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -8,7 +7,7 @@ const Contact = () => {
   console.log(errors);
 
   return (
-    <section id="contact" className="mb-40 pb-20 scroll-mt-20" >
+    <section id="contact" className="mb-20 pb-20 scroll-mt-20" >
             <div className="grid grid-cols-1 md:grid-cols-12 gap-16">
                 <div className="md:col-span-5">
                     <h2 className="text-3xl font-light tracking-tight mb-8 underline underline-offset-[16px] decoration-blue-500/30">Connect_Now</h2>

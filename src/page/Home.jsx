@@ -5,19 +5,30 @@ import Projects from "../components/Projects";
 import Experience from "../components/Experience";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import ContainerSlide from "../components/animation/ContainerSlide";
 const Home = () => {
 	return (
 		<div className="pt-40">
 			{/* Section: Hero */}
-			<Hero />
+			<ContainerSlide>
+				<Hero />
+			</ContainerSlide>
 			{/* Section: Skills */}
-			<Skills />
+			<ContainerSlide>
+				<Skills />
+			</ContainerSlide>
 			{/* Section: Projects */}
-			<Projects />
+			<ContainerSlide>
+				<Projects />
+			</ContainerSlide>
 			{/* Section: Experience */}
-			<Experience/>
+			<ContainerSlide>
+			<Experience />
+			</ContainerSlide>
 			{/* Section: Contact */}
-			<Contact />
+			<ContainerSlide>
+				<Contact />
+			</ContainerSlide>
 			{/* Section: Footer */}
 			<Footer />
 		</div>

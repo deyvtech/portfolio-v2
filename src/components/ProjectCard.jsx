@@ -5,10 +5,11 @@ import { Link2, Github } from "lucide-react";
 import { motion as Motion } from "motion/react";
 
 const item = {
-	hide: { opacity: 0, y: 20, filter: "blur(10px)" },
+	hide: { opacity: 0, y: 20, x: -500, filter: "blur(10px)" },
 	show: {
 		opacity: 1,
 		y: 0,
+		x: 0,
 		filter: "blur(0px)",
 		transition: {
 			duration: 0.6,

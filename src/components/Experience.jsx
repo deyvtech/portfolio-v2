@@ -5,7 +5,6 @@ const Experience = () => {
 		<section
 			id="experience"
 			className="mb-40 scroll-mt-20"
-			
 		>
 			<h2 className="text-3xl font-light tracking-tight mb-12">
 				Experience_Terminal
