@@ -36,16 +36,16 @@ const Contact = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label htmlFor="full_name" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Identity_Token</label>
-                                  <input type="text" className="input-field" placeholder="Full Name" value="Dave Lexter Supsup" {...register("full_name", {required: true})} />
+                                  <input type="text" className="input-field" placeholder="Full Name" value="" {...register("full_name", {required: true})} />
                             </div>
                             <div className="space-y-2">
                                 <label htmlFor="email_address" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Return_Channel</label>
-                                <input type="email" className="input-field" placeholder="Email Address" value="kingnorway17@gmail.com" {...register("email_address", {required: true})} />
+                                <input type="email" className="input-field" placeholder="Email Address" value="" {...register("email_address", {required: true})} />
                             </div>
                         </div>
                         <div className="space-y-2">
                             <label htmlFor="message" className="text-[9px] uppercase tracking-widest opacity-100 dark:opacity-40">Message_Buffer</label>
-                            <textarea rows="6" placeholder="Project details and scope..." className="input-field resize-none" value="This is a message" {...register("message", {required: true})} />
+                            <textarea rows="6" placeholder="Project details and scope..." className="input-field resize-none" value="" {...register("message", {required: true})} />
                         </div>
                         
                         <div className="flex justify-between items-center">
