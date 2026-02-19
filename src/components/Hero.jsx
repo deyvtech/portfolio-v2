@@ -1,4 +1,5 @@
 import React from "react";
+import pdf from "../assets/my-cv.pdf";
 import TextType from "./animation/TextType";
 import { motion as Motion } from "motion/react";
 const container = {
@@ -65,13 +66,15 @@ const Hero = () => {
 			</Motion.p>
 			<Motion.div variants={textVariant} className="flex flex-wrap gap-4">
 				<a
-					href="#"
+					href="#contact"
 					className="bg-red-600 text-white px-10 py-4 text-[11px] uppercase tracking-[0.2em] hover:bg-red-700 hover:-translate-y-2 hover:scale-95 transition-all shadow-lg shadow-red-500/20"
 				>
 					Connect_System()
 				</a>
 				<a
-					href="#"
+					href={pdf}
+					target="_blank"
+					rel="noopener noreferrer"
 					className="border border-blue-200 dark:border-blue-800 px-10 py-4 text-[11px] uppercase tracking-[0.2em] hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-all hover:-translate-y-2 hover:scale-95"
 				>
 					Get_Resume.PDF

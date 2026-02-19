@@ -26,7 +26,10 @@ const textVariant = {
 	},
 	transition: { duration: 0.6 },
 };
-
+const skillsContainer = {
+	hide: { opacity: 0, y: 20 },
+	show: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
+};
 const ProjectCard = ({
 	title,
 	subtitle,
@@ -49,7 +52,7 @@ const ProjectCard = ({
 			<Motion.p variants={textVariant} className=" text-neutral-500 mt-4 font-inter text-sm leading-relaxed mb-6">
 				{description}
 			</Motion.p>
-			<Motion.div variants={textVariant} className="inline-flex flex-wrap gap-x-4 gap-y-3 max-w-200">
+			<Motion.div variants={skillsContainer} className="inline-flex flex-wrap gap-x-4 gap-y-3 max-w-200">
 				{
 					/* Using constants to map through core technologies */
 					coreTechnologies
