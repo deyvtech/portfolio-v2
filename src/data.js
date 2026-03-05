@@ -75,6 +75,17 @@ export const navLinks = [
 export const projects = [
 	{
 		id: 1,
+		title: "FS Deluxe Ecommerce",
+		subtitle: "Project_002",
+		description: `A centralized Merchant Control Center for end-to-end
+						store management. Built to handle inventory tracking,
+						order processing, and sales analytics.`,
+		projectLink: "#",
+		repoLink: "https://github.com/deyvtech/pern-ecommerce.git",
+		useTechnologies: [1, 2, 3, 5, 7],
+	},
+	{
+		id: 2,
 		title: "ByteHive",
 		subtitle: "Project_001",
 		description: `A Full-Stack Q&A Ecosystem featuring a community-driven
@@ -84,17 +95,6 @@ export const projects = [
 		projectLink: "https://byte-hive.vercel.app/",
 		repoLink: "https://github.com/deyvtech/ByteHive.git",
 		useTechnologies: [2, 5, 6],
-	},
-	{
-		id: 2,
-		title: "FS Deluxe Ecommerce",
-		subtitle: "Project_002",
-		description: `A centralized Merchant Control Center for end-to-end
-						store management. Built to handle inventory tracking,
-						order processing, and sales analytics.`,
-		projectLink: "#",
-		repoLink: "https://github.com/deyvtech/pern-ecommerce.git",
-		useTechnologies: [1, 2, 3, 5, 7],
 	},
 	{
 		id: 3,
